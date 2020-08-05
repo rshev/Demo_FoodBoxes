@@ -9,8 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: ProductListViewModel
+
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            ProductListView()
+        }
+        .onAppear(perform: {
+            viewModel.attach()
+        })
     }
 }
 
