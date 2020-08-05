@@ -14,15 +14,9 @@ struct ProductListView: View {
     var body: some View {
         List {
             ForEach(viewModel.products, id: \.self) { product in
-                Text(product.title)
+                ProductRowView(product: product)
             }
         }
         .navigationBarTitle("Product List")
-    }
-}
-
-struct ProductListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductListView()
     }
 }

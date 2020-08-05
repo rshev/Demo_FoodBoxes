@@ -22,7 +22,7 @@ final class ProductListViewModel: ObservableObject {
         products = localStorage.products
     }
 
-    @Published var products: [Product]
+    @Published private(set) var products: [Product]
 
     func attach() {
         let endpoint = GetProductsEndpoint()
@@ -32,9 +32,16 @@ final class ProductListViewModel: ObservableObject {
                 // TODO: handle error
                 break
             case .success(let response):
-                self?.products = response.products
-                self?.localStorage.products = response.products
+                self?.updateProducts(with: response.products)
             }
+        }
+    }
+
+    private func updateProducts(with products: [Product]) {
+        // A chance to filter / process products
+        localStorage.products = products
+        DispatchQueue.main.async { [weak self] in
+            self?.products = products
         }
     }
 }

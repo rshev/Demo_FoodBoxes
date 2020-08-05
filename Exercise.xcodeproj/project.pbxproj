@@ -23,6 +23,8 @@
 		9BC8EE5E24DACD5F0009BEDE /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE5D24DACD5F0009BEDE /* ProductListViewModel.swift */; };
 		9BC8EE6024DAD6370009BEDE /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE5F24DAD6370009BEDE /* LocalStorage.swift */; };
 		9BC8EE6324DADC110009BEDE /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE6224DADC110009BEDE /* ProductListView.swift */; };
+		9BC8EE6524DAFB4E0009BEDE /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE6424DAFB4E0009BEDE /* ProductRowView.swift */; };
+		9BC8EE6724DB03D00009BEDE /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE6624DB03D00009BEDE /* AsyncImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		9BC8EE5D24DACD5F0009BEDE /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		9BC8EE5F24DAD6370009BEDE /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		9BC8EE6224DADC110009BEDE /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		9BC8EE6424DAFB4E0009BEDE /* ProductRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowView.swift; sourceTree = "<group>"; };
+		9BC8EE6624DB03D00009BEDE /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 			children = (
 				9B63770F24DAC0F5009D5BC7 /* ContentView.swift */,
 				9BC8EE6224DADC110009BEDE /* ProductListView.swift */,
+				9BC8EE6424DAFB4E0009BEDE /* ProductRowView.swift */,
+				9BC8EE6624DB03D00009BEDE /* AsyncImage.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -330,9 +336,11 @@
 				9BC8EE5824DAC5200009BEDE /* ProductsResponse.swift in Sources */,
 				9BC8EE5524DAC4BA0009BEDE /* ProductsEndpoint.swift in Sources */,
 				9BC8EE5124DAC43E0009BEDE /* API.swift in Sources */,
+				9BC8EE6524DAFB4E0009BEDE /* ProductRowView.swift in Sources */,
 				9BC8EE5E24DACD5F0009BEDE /* ProductListViewModel.swift in Sources */,
 				9B63771024DAC0F5009D5BC7 /* ContentView.swift in Sources */,
 				9BC8EE5C24DACCEB0009BEDE /* Configuration.swift in Sources */,
+				9BC8EE6724DB03D00009BEDE /* AsyncImage.swift in Sources */,
 				9BC8EE5324DAC4760009BEDE /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
