@@ -16,20 +16,20 @@ struct ProductsResponse: Codable {
     }
 }
 
-struct Product: Codable, Identifiable {
+struct Product: Codable, Equatable, Hashable, Identifiable {
     var id: String
     var title: String
     var description: String
     var price: String
     var images: [URL] {
-        return _images.values.map(\.url)
+        return _images.values.compactMap({ $0 }).map(\.url)
     }
 
     // MARK: Private transformations
 
-    private var _images: [String: Image]
+    private var _images: [String: Image?]
 
-    struct Image: Codable {
+    struct Image: Codable, Equatable, Hashable {
         var url: URL
     }
 
