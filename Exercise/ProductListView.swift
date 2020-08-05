@@ -14,7 +14,9 @@ struct ProductListView: View {
     var body: some View {
         List {
             ForEach(viewModel.products, id: \.self) { product in
-                ProductRowView(product: product)
+                NavigationLink(destination: ProductDetailView(product: product)) {
+                    ProductRowView(product: product)
+                }
             }
         }
         .navigationBarTitle("Product List")

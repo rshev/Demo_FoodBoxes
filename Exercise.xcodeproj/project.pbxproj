@@ -25,6 +25,7 @@
 		9BC8EE6324DADC110009BEDE /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE6224DADC110009BEDE /* ProductListView.swift */; };
 		9BC8EE6524DAFB4E0009BEDE /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE6424DAFB4E0009BEDE /* ProductRowView.swift */; };
 		9BC8EE6724DB03D00009BEDE /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE6624DB03D00009BEDE /* AsyncImage.swift */; };
+		9BC8EE6924DB0F930009BEDE /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE6824DB0F920009BEDE /* ProductDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		9BC8EE6224DADC110009BEDE /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		9BC8EE6424DAFB4E0009BEDE /* ProductRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowView.swift; sourceTree = "<group>"; };
 		9BC8EE6624DB03D00009BEDE /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		9BC8EE6824DB0F920009BEDE /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 				9B63770F24DAC0F5009D5BC7 /* ContentView.swift */,
 				9BC8EE6224DADC110009BEDE /* ProductListView.swift */,
 				9BC8EE6424DAFB4E0009BEDE /* ProductRowView.swift */,
+				9BC8EE6824DB0F920009BEDE /* ProductDetailView.swift */,
 				9BC8EE6624DB03D00009BEDE /* AsyncImage.swift */,
 			);
 			name = Views;
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BC8EE6324DADC110009BEDE /* ProductListView.swift in Sources */,
+				9BC8EE6924DB0F930009BEDE /* ProductDetailView.swift in Sources */,
 				9B63770C24DAC0F5009D5BC7 /* AppDelegate.swift in Sources */,
 				9BC8EE6024DAD6370009BEDE /* LocalStorage.swift in Sources */,
 				9B63770E24DAC0F5009D5BC7 /* SceneDelegate.swift in Sources */,

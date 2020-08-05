@@ -21,8 +21,10 @@ struct Product: Codable, Equatable, Hashable, Identifiable {
     var title: String
     var description: String
     var price: String
-    var images: [URL] {
-        return _images.values.compactMap({ $0 }).map(\.url)
+    var imageURL: URL? {
+        return _images.values.first
+            .flatMap { $0 }?
+            .url
     }
 
     // MARK: Private transformations
@@ -47,7 +49,7 @@ extension Product {
     static var dummy: Product {
         return Product(
             id: UUID().uuidString,
-            title: "Dummy product",
+            title: "Dummy product with a long dummy title",
             description: """
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             """,
