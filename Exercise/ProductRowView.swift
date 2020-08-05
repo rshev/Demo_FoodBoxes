@@ -13,8 +13,8 @@ struct ProductRowView: View {
 
     var body: some View {
         HStack {
-            if let imageURL = product.images.first {
-                AsyncImage(url: imageURL, placeholder: Color.gray)
+            if product.imageURL != nil {
+                AsyncImage(url: product.imageURL!, placeholder: Color.gray)
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 75, height: 75, alignment: .center)
             }
