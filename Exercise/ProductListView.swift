@@ -10,10 +10,19 @@ import SwiftUI
 
 struct ProductListView: View {
     @EnvironmentObject var viewModel: ProductListViewModel
+    @State var searchText: String = ""
 
     var body: some View {
         List {
-            ForEach(viewModel.products, id: \.self) { product in
+            SearchBarView(text: $searchText)
+            ForEach(
+                viewModel.products
+                    .filter {
+                        if searchText == "" { return true }
+                        return $0.title.localizedLowercase.contains(searchText.localizedLowercase)
+                    },
+                id: \.self
+            ) { product in
                 NavigationLink(destination: ProductDetailView(product: product)) {
                     ProductRowView(product: product)
                 }

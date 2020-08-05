@@ -26,6 +26,7 @@
 		9BC8EE6524DAFB4E0009BEDE /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE6424DAFB4E0009BEDE /* ProductRowView.swift */; };
 		9BC8EE6724DB03D00009BEDE /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE6624DB03D00009BEDE /* AsyncImage.swift */; };
 		9BC8EE6924DB0F930009BEDE /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EE6824DB0F920009BEDE /* ProductDetailView.swift */; };
+		9BF90E9024DB1DD50024DD2F /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF90E8F24DB1DD50024DD2F /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		9BC8EE6424DAFB4E0009BEDE /* ProductRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowView.swift; sourceTree = "<group>"; };
 		9BC8EE6624DB03D00009BEDE /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		9BC8EE6824DB0F920009BEDE /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		9BF90E8F24DB1DD50024DD2F /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				9BC8EE6224DADC110009BEDE /* ProductListView.swift */,
 				9BC8EE6424DAFB4E0009BEDE /* ProductRowView.swift */,
 				9BC8EE6824DB0F920009BEDE /* ProductDetailView.swift */,
+				9BF90E8F24DB1DD50024DD2F /* SearchBarView.swift */,
 				9BC8EE6624DB03D00009BEDE /* AsyncImage.swift */,
 			);
 			name = Views;
@@ -342,6 +345,7 @@
 				9BC8EE5124DAC43E0009BEDE /* API.swift in Sources */,
 				9BC8EE6524DAFB4E0009BEDE /* ProductRowView.swift in Sources */,
 				9BC8EE5E24DACD5F0009BEDE /* ProductListViewModel.swift in Sources */,
+				9BF90E9024DB1DD50024DD2F /* SearchBarView.swift in Sources */,
 				9B63771024DAC0F5009D5BC7 /* ContentView.swift in Sources */,
 				9BC8EE5C24DACCEB0009BEDE /* Configuration.swift in Sources */,
 				9BC8EE6724DB03D00009BEDE /* AsyncImage.swift in Sources */,
