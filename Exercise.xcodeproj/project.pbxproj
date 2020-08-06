@@ -28,6 +28,7 @@
 		9BF90E9024DB1DD50024DD2F /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF90E8F24DB1DD50024DD2F /* SearchBarView.swift */; };
 		9BF90E9224DC07310024DD2F /* ProductsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF90E9124DC07310024DD2F /* ProductsViewModelTests.swift */; };
 		9BF90E9424DC07BC0024DD2F /* Fakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF90E9324DC07BC0024DD2F /* Fakes.swift */; };
+		9BF90E9624DC13C00024DD2F /* ProductsResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF90E9524DC13C00024DD2F /* ProductsResponseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		9BF90E8F24DB1DD50024DD2F /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		9BF90E9124DC07310024DD2F /* ProductsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModelTests.swift; sourceTree = "<group>"; };
 		9BF90E9324DC07BC0024DD2F /* Fakes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fakes.swift; sourceTree = "<group>"; };
+		9BF90E9524DC13C00024DD2F /* ProductsResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsResponseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				9BF90E9124DC07310024DD2F /* ProductsViewModelTests.swift */,
+				9BF90E9524DC13C00024DD2F /* ProductsResponseTests.swift */,
 				9BF90E9324DC07BC0024DD2F /* Fakes.swift */,
 				9B63772424DAC0F7009D5BC7 /* Info.plist */,
 			);
@@ -360,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF90E9624DC13C00024DD2F /* ProductsResponseTests.swift in Sources */,
 				9BF90E9424DC07BC0024DD2F /* Fakes.swift in Sources */,
 				9BF90E9224DC07310024DD2F /* ProductsViewModelTests.swift in Sources */,
 			);

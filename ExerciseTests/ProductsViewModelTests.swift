@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import Combine
 @testable import Exercise
 
 final class ProductsViewModelTests: XCTestCase {
