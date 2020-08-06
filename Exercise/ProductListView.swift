@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ProductListView: View {
-    @EnvironmentObject var viewModel: ProductListViewModel
+    @EnvironmentObject var viewModel: ProductsViewModel
     @State var searchText: String = ""
 
     var body: some View {

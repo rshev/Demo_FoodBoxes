@@ -1,5 +1,5 @@
 //
-//  ProductListViewModel.swift
+//  ProductsViewModel.swift
 //  Exercise
 //
 //  Created by Roman Shevtsov on 05/08/2020.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class ProductListViewModel: ObservableObject {
+final class ProductsViewModel: ObservableObject {
     private let api: APIProvider
     private let localStorage: LocalStorageProvider
 
