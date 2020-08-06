@@ -30,12 +30,12 @@ struct AsyncImage<Placeholder: View>: View {
                 placeholder
             }
         }
-        .onAppear(perform: {
+        .onAppear {
             self.loader.load()
-        })
-        .onDisappear(perform: {
+        }
+        .onDisappear {
             self.loader.cancel()
-        })
+        }
     }
 }
 

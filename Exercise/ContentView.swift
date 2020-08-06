@@ -15,8 +15,8 @@ struct ContentView: View {
         NavigationView {
             ProductListView()
         }
-        .onAppear(perform: {
+        .onAppear {
             self.viewModel.attach()
-        })
+        }
     }
 }
