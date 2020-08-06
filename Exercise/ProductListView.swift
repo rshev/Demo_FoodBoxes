@@ -15,6 +15,7 @@ struct ProductListView: View {
     var body: some View {
         List {
             SearchBarView(text: $searchText)
+                .accessibility(identifier: "search bar")
             ForEach(
                 viewModel.products
                     .filter {
@@ -26,6 +27,7 @@ struct ProductListView: View {
                 NavigationLink(destination: ProductDetailView(product: product)) {
                     ProductRowView(product: product)
                 }
+                .accessibility(identifier: "product row")
             }
         }
         .navigationBarTitle("Product List")

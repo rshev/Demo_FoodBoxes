@@ -82,7 +82,7 @@ final class ProductsResponseTests: XCTestCase {
             {
               "id": "02c225f2-63b4-11e6-8516-023d2759e21d",
               "title": "Rioja Reserva, Baron de Ebro",
-              "description": "Intriguing notes of vanilla and chocolate make this fruity, full-bodied wine unique. With a long, pleasant finish and woody aroma supporting it, this characterful wine is a good match with beef dishes.\nABV 14%.",
+              "description": "Intriguing notes of vanilla and chocolate make this fruity, full-bodied wine unique. With a long, pleasant finish and woody aroma supporting it, this characterful wine is a good match with beef dishes. ABV 14%.",
               "list_price": "9.95",
               "images": {}
             }

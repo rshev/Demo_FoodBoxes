@@ -17,10 +17,13 @@ struct ProductRowView: View {
                 AsyncImage(url: product.imageURL!, placeholder: Color.gray)
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 75, height: 75, alignment: .center)
+                    .accessibility(identifier: "image")
             }
             Text(product.title)
+                .accessibility(identifier: "title")
             Spacer()
             Text("£\(product.price)")
+                .accessibility(identifier: "price")
         }
     }
 }
