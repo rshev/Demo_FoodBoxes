@@ -1,6 +1,8 @@
 # GoustoExercise
 
-Please see original requirements in original pdf nearby.
+![demo gif](demo.gif)
+
+Please see original requirements in original [pdf](Gousto_iOS_Test.pdf)
 
 ## Target environment
 - Xcode 11.6 - 12.0b4
