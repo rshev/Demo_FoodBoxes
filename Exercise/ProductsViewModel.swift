@@ -11,13 +11,16 @@ import Foundation
 final class ProductsViewModel: ObservableObject {
     private let api: APIProvider
     private let localStorage: LocalStorageProvider
+    private let propagationQueue: DispatchQueue
 
     init(
         api: APIProvider = API(baseURL: Configuration.apiBaseURL),
-        localStorage: LocalStorageProvider = LocalStorage()
+        localStorage: LocalStorageProvider = LocalStorage(),
+        propagationQueue: DispatchQueue = .main
     ) {
         self.api = api
         self.localStorage = localStorage
+        self.propagationQueue = propagationQueue
 
         products = localStorage.products
     }
@@ -40,7 +43,8 @@ final class ProductsViewModel: ObservableObject {
     private func updateProducts(with products: [Product]) {
         // A chance to filter / process products
         localStorage.products = products
-        DispatchQueue.main.async { [weak self] in
+        // UI should be updated (via Combine) on main queue
+        propagationQueue.async { [weak self] in
             self?.products = products
         }
     }
