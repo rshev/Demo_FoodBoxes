@@ -17,18 +17,18 @@ struct ProductDetailView: View {
                 if product.imageURL != nil {
                     AsyncImage(url: product.imageURL!, placeholder: Color.gray)
                         .aspectRatio(contentMode: .fit)
-                    VStack {
-                        HStack(alignment: .firstTextBaseline) {
-                            Text(product.title)
-                                .font(.title)
-                            Spacer()
-                            Text("£\(product.price)")
-                        }
-                        Spacer()
-                        Text(product.description)
-                    }
-                    .padding()
                 }
+                VStack(spacing: 16) {
+                    HStack(alignment: .firstTextBaseline) {
+                        Text(product.title)
+                            .font(.title)
+                        Spacer()
+                        Text("£\(product.price)")
+                    }
+                    Text(product.description)
+                    Spacer()
+                }
+                .padding()
             }
         }
         .navigationBarTitle(Text(product.title), displayMode: .inline)
@@ -40,4 +40,3 @@ struct ProductDetailView_Previews: PreviewProvider {
         ProductDetailView(product: .dummy)
     }
 }
-

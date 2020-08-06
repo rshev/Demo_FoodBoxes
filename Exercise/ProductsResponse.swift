@@ -22,9 +22,7 @@ struct Product: Codable, Equatable, Hashable, Identifiable {
     var description: String
     var price: String
     var imageURL: URL? {
-        return _images.values.first
-            .flatMap { $0 }?
-            .url
+        return _images.values.first??.url
     }
 
     // MARK: Private transformations
