@@ -7,24 +7,38 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SearchBarView: UIViewRepresentable {
     @Binding var text: String
 
     class Coordinator: NSObject, UISearchBarDelegate {
+        var cancellables = Set<AnyCancellable>()
+
         @Binding var text: String
+        let textSubject = CurrentValueSubject<String, Never>("")
 
         init(text: Binding<String>) {
             _text = text
         }
 
+        lazy var _setup: Void = {
+            textSubject
+                .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+                .sink { [weak self] in
+                    self?.text = $0
+                }
+                .store(in: &cancellables)
+        }()
+
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            text = searchText
+            _ = _setup
+            textSubject.send(searchText)
         }
 
         func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
             searchBar.text = ""
-            text = ""
+            textSubject.send("")
             searchBar.setShowsCancelButton(false, animated: true)
             searchBar.resignFirstResponder()
         }

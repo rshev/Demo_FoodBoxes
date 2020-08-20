@@ -13,6 +13,7 @@ Please see original requirements in original [pdf](Gousto_iOS_Test.pdf)
 - Swift UI 1
 - Dark mode and accessibility support
 - Persistence layer for offline product list storage, stored in caches as file
+- Debouncing of search term with Combine
 - Clear separation of concerns
 - Dependency injection
 - MVVM with reactive subscription interface for UI
