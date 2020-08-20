@@ -13,38 +13,37 @@ protocol LocalStorageProvider: AnyObject {
 }
 
 final class LocalStorage: LocalStorageProvider {
-    private let userDefaults: UserDefaults
+    init() {}
 
-    init(
-        userDefaults: UserDefaults = .standard
-    ) {
-        self.userDefaults = userDefaults
+    private lazy var fileManager = FileManager.default
+    private var cachesDirectory: URL? {
+        try? fileManager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+    }
+    private func cacheURL(withFilename filename: String) -> URL? {
+        cachesDirectory?.appendingPathComponent("\(filename).json")
     }
 
     var products: [Product] {
         get {
-            userDefaults.decode(fromKey: #function) ?? []
+            guard
+                let url = cacheURL(withFilename: #function),
+                let data = try? Data(contentsOf: url),
+                let products = try? JSONDecoder().decode([Product].self, from: data)
+            else {
+                return []
+            }
+            return products
         }
         set {
-            userDefaults.encode(newValue, toKey: #function)
-        }
-    }
-}
-
-private extension UserDefaults {
-    func decode<T: Decodable>(fromKey key: String) -> T? {
-        guard let data = object(forKey: key) as? Data else {
-            return nil
-        }
-        return try? JSONDecoder().decode(T.self, from: data)
-    }
-
-    func encode<T: Encodable>(_ value: T, toKey key: String) {
-        do {
-            let data = try JSONEncoder().encode(value)
-            set(data, forKey: key)
-        } catch {
-            assertionFailure("Failed to encode \(value) to key \(key)")
+            do {
+                guard let url = cacheURL(withFilename: #function) else {
+                    throw URLError(.badURL)
+                }
+                let data = try JSONEncoder().encode(newValue)
+                try data.write(to: url, options: .atomicWrite)
+            } catch {
+                assertionFailure("Cannot encode/store data")
+            }
         }
     }
 }
